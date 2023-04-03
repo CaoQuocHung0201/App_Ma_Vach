@@ -13,6 +13,9 @@
         android:theme="@style/Theme.App_Ma_Vach"
         tools:targetApi="31">
         <activity
+            android:name=".Views.ImportActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
