@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,11 +31,26 @@ public class ImportActivity extends AppCompatActivity {
 
     int quantity=0, Inventory_number=0;
 
+    EditText edtSeri,edtName,edtDateImport,edtQuantity;
+    TextView btnImport,btnBack;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan);
+        setContentView(R.layout.activity_import);
+        init();
     }
+
+    private void init(){
+        edtSeri = findViewById(R.id.edtSeri);
+        edtName = findViewById(R.id.edtName);
+        edtDateImport = findViewById(R.id.edtDateImport);
+        edtQuantity = findViewById(R.id.edtQuantity);
+        btnImport = findViewById(R.id.edtSeri);
+        btnBack = findViewById(R.id.edtSeri);
+    }
+
 
     private void get_time() {
         Handler handler = new Handler();
